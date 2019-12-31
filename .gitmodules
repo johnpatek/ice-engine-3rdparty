@@ -7,3 +7,9 @@
 [submodule "libuv"]
 	path = libuv
 	url = https://github.com/libuv/libuv
+[submodule "zlib"]
+	path = zlib
+	url = https://github.com/madler/zlib.git
+[submodule "uWebSockets"]
+	path = uWebSockets
+	url = https://github.com/johnpatek/uWebSockets
