@@ -10,3 +10,6 @@
 [submodule "zlib"]
 	path = zlib
 	url = https://github.com/madler/zlib.git
+[submodule "uWebSocketsCMake"]
+	path = uWebSocketsCMake
+	url = https://github.com/johnpatek/uWebSocketsCMake.git
