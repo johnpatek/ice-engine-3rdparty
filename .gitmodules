@@ -1,6 +1,6 @@
 [submodule "json11"]
 	path = json11
-	url = git@github.com:johnpatek/json11.git
+	url = https://github.com/johnpatek/json11.git
 [submodule "capnproto"]
 	path = capnproto
 	url = https://github.com/capnproto/capnproto
@@ -10,6 +10,3 @@
 [submodule "zlib"]
 	path = zlib
 	url = https://github.com/madler/zlib.git
-[submodule "uWebSockets"]
-	path = uWebSockets
-	url = https://github.com/johnpatek/uWebSockets
