@@ -10,3 +10,6 @@
 [submodule "uWebSocketsCMake"]
 	path = uWebSocketsCMake
 	url = https://github.com/johnpatek/uWebSocketsCMake.git
+[submodule "capnproto"]
+	path = capnproto
+	url = https://github.com/johnpatek/capnproto
