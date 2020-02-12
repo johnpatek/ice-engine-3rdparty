@@ -1,15 +1,3 @@
-[submodule "json11"]
-	path = json11
-	url = https://github.com/johnpatek/json11.git
-[submodule "libuv"]
-	path = libuv
-	url = https://github.com/libuv/libuv
-[submodule "zlib"]
-	path = zlib
-	url = https://github.com/madler/zlib.git
-[submodule "uWebSocketsCMake"]
-	path = uWebSocketsCMake
-	url = https://github.com/johnpatek/uWebSocketsCMake.git
-[submodule "capnproto"]
-	path = capnproto
-	url = https://github.com/johnpatek/capnproto
+[submodule "cpprestsdk"]
+	path = cpprestsdk
+	url = https://github.com/microsoft/cpprestsdk
