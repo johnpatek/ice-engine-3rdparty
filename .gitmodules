@@ -7,3 +7,6 @@
 [submodule "googletest"]
 	path = googletest
 	url = https://github.com/google/googletest.git
+[submodule "sdl2"]
+	path = sdl2
+	url = https://github.com/johnpatek/sdl2.git
