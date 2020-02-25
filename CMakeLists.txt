@@ -27,10 +27,12 @@ endif ()
 
 set(CPACK_GENERATOR ${PACKAGE})
 
-set(CPACK_PACKAGING_INSTALL_PREFIX /usr/share/ice-common)
-set(CPACK_SOURCE_IGNORE_FILES
-    *.m4
-)
+if(WIN32)
+    set(CPACK_PACKAGING_INSTALL_PREFIX "C:/Program Files/ice-common")
+else()
+    set(CPACK_PACKAGING_INSTALL_PREFIX /usr/share/ice-common)
+endif
+
 set(CPACK_PACKAGE_CONTACT "John R. Patek <johnpatek2@gmail.com>")
 set(CPACK_PACKAGE_DESCRIPTION "ICEngine Dependencies")
 set(CPACK_PACKAGE_VERSION_MAJOR ${VERSION_MAJOR})
