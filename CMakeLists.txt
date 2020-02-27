@@ -4,9 +4,8 @@ project(ice-engine-3rdparty)
 
 set(CMAKE_INSTALL_PREFIX ${PROJECT_SOURCE_DIR}/install)
 
-add_subdirectory(cpprestsdk)
+add_subdirectory(uWebSocketsCMake)
 add_subdirectory(sdl2)
-add_subdirectory(googletest)
 
 set(VERSION_MAJOR 0)
 set(VERSION_MINOR 0)
@@ -19,11 +18,11 @@ elseif (APPLE)
     set(PACKAGE "APPLE")
     set(PLATFORM "APPLE")
     set(GENERATOR "APPLE")
-else ()
+else()
     set(PACKAGE "DEB")
     set(PLATFORM "UBUNTU")
     set(GENERATOR "DEBIAN")
-endif ()
+endif()
 
 set(CPACK_GENERATOR ${PACKAGE})
 
@@ -31,7 +30,7 @@ if(WIN32)
     set(CPACK_PACKAGING_INSTALL_PREFIX "C:/Program Files/ice-common")
 else()
     set(CPACK_PACKAGING_INSTALL_PREFIX /usr/share/ice-common)
-endif
+endif()
 
 set(CPACK_PACKAGE_CONTACT "John R. Patek <johnpatek2@gmail.com>")
 set(CPACK_PACKAGE_DESCRIPTION "ICEngine Dependencies")
