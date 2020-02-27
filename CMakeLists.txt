@@ -4,7 +4,11 @@ project(ice-engine-3rdparty)
 
 set(CMAKE_INSTALL_PREFIX ${PROJECT_SOURCE_DIR}/install)
 
+set(LIBUV_INCLUDE_DIR ${PROJECT_SOURCE_DIR}/libuv/include)
+link_directories(${PROJECT_BINARY_DIR}/libuv)
+set(LIBUV_LIBRARY uv)
 
+add_subdirectory(libuv)
 add_subdirectory(uWebSocketsCMake)
 add_subdirectory(googletest)
 add_subdirectory(sdl2)
