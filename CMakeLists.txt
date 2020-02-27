@@ -4,7 +4,9 @@ project(ice-engine-3rdparty)
 
 set(CMAKE_INSTALL_PREFIX ${PROJECT_SOURCE_DIR}/install)
 
+
 add_subdirectory(uWebSocketsCMake)
+add_subdirectory(googletest)
 add_subdirectory(sdl2)
 
 set(VERSION_MAJOR 0)
