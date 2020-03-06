@@ -8,5 +8,5 @@ fi
 
 cd build
 cmake ..
+make install
 cd ..
-cmake --build build --target install

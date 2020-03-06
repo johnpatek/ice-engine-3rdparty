@@ -2,13 +2,13 @@ cmake_minimum_required(VERSION 3.0)
 
 project(ice-engine-3rdparty)
 
-set(CMAKE_INSTALL_PREFIX ${PROJECT_SOURCE_DIR}/install)
+set(CMAKE_INSTALL_PREFIX ${PROJECT_BINARY_DIR}/install)
 
 set(LIBUV_INCLUDE_DIR ${PROJECT_SOURCE_DIR}/libuv/include)
 link_directories(${PROJECT_BINARY_DIR}/libuv)
-set(LIBUV_LIBRARY uv)
+set(LIBUV_LIBRARY libuv_a.a)
 
-
+add_subdirectory(zlib)
 add_subdirectory(libuv)
 add_subdirectory(uWebSocketsCMake)
 add_subdirectory(googletest)
@@ -31,6 +31,29 @@ else()
     set(PLATFORM "UBUNTU")
     set(GENERATOR "DEBIAN")
 endif()
+
+
+set(CPACK_PACKAGE_NAME "ice-engine-common")
+
+install(
+  DIRECTORY ${CMAKE_INSTALL_PREFIX}/
+  DESTINATION .
+  COMPONENT 3rdparty
+  USE_SOURCE_PERMISSIONS
+  FILES_MATCHING
+  PATTERN *.h
+  PATTERN *.hpp
+  PATTERN *.a
+  PATTERN *.so*
+  PATTERN include
+  PATTERN share EXCLUDE
+  PATTERN bin EXCLUDE
+  PATTERN pkgconfig EXCLUDE
+  PATTERN cmake EXCLUDE)
+
+set(CPACK_${PACKAGE}_COMPONENT_INSTALL ON)
+set(CPACK_COMPONENTS_ALL 3rdparty)
+
 
 set(CPACK_GENERATOR ${PACKAGE})
 

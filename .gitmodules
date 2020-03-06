@@ -13,3 +13,6 @@
 [submodule "curl"]
 	path = curl
 	url = https://github.com/johnpatek/curl.git
+[submodule "libuv"]
+	path = libuv
+	url = https://github.com/johnpatek/libuv.git
